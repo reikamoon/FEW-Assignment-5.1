@@ -1,0 +1,18 @@
+$size: 200px;
+$space: 20px;
+$color: #f00;
+$font-stack: Helvetica, Roboto, Arial;
+$border-size: 1px;
+$petals: 5;
+
+.container {
+  width: $size; // width: 200px;
+}
+
+.box {
+  margin: $space; // margin: 20px;
+}
+
+h1 {
+  font-family: $font-stack; // font-family: Helvetica, Roboto, Arial;
+}
