@@ -1,18 +1,69 @@
-$size: 200px;
 $space: 20px;
-$color: #f00;
 $font-stack: Helvetica, Roboto, Arial;
 $border-size: 1px;
 $petals: 5;
+// Foreground Color
+$color: #f00;
+// Base size
+$size: 200px;
+// Petal size
+$petal-size: $size * 0.6;
 
-.container {
-  width: $size; // width: 200px;
-}
+///Flower Time
+$lotush: 300px;
+$lotusw: 300px;
+$first-petal: rgba(255, 0, 0, 0.5);
+$second-petal: rgba(255, 255, 0, 0.5);
+$third-petal: rgba(0, 255, 0, 0.5);
+$fourth-petal: rgba(0, 255, 255, 0.5);
+$fifth-petal: rgba(0, 0, 255, 0.5);
 
 .box {
   margin: $space; // margin: 20px;
 }
 
-h1 {
-  font-family: $font-stack; // font-family: Helvetica, Roboto, Arial;
+.lotus {
+    width: $lotusw;
+    height: $lotush;
+    left: 50px;
+    top: 0px;
+    border: 1px solid;
+    position: relative;
+}
+
+.lotus > div {
+    position: absolute;
+    width: $size;
+    height: $size;
+    border: 1px solid;
+    border-radius: 0 70% 50% 70%;
+    left: 20px;
+    top: 70px;
+    transform: rotate(45deg);
+    transform-origin: 150px 150px;
+}
+
+.lotus > div:nth-child(1) {
+    background-color: $first-petal;
+    transform: rotate(-45deg);
+}
+
+.lotus > div:nth-child(2) {
+    background-color: $second-petal;
+    transform: rotate(0);
+}
+
+.lotus > div:nth-child(3) {
+    background-color: $third-petal;
+    transform: rotate(45deg);
+}
+
+.lotus > div:nth-child(4) {
+    background-color: $fourth-petal;
+    transform: rotate(90deg);
+}
+
+.lotus > div:nth-child(5) {
+    background-color: $fifth-petal;
+    transform: rotate(135deg);
 }
