@@ -56,7 +56,7 @@
   }
   100% {
     transform: rotate(-45deg);
-    background-color: rgba(255, 205, 230, 0.5);
+    background-image: linear-gradient(rgba(255, 205, 230, 0.5), rgba(255, 0, 0, 0.5));
   }
 }
 @keyframes bloom-2 {
@@ -64,13 +64,17 @@
     transform: rotate(45deg);
   }
   100% {
-    transform: rotate(0);
-    background-color: rgba(255, 205, 230, 0.5);
+    transform: rotate(0deg);
+    background-image: linear-gradient(rgba(255, 205, 230, 0.5), rgba(255, 0, 0, 0.5));
   }
 }
 @keyframes bloom-3 {
+  0% {
+    transform: rotate(45deg);
+  }
   100% {
-    background-color: rgba(255, 205, 230, 0.5);
+    transform: rotate(45deg);
+    background-image: linear-gradient(rgba(255, 205, 230, 0.5), rgba(255, 0, 0, 0.5));
   }
 }
 @keyframes bloom-4 {
@@ -79,7 +83,7 @@
   }
   100% {
     transform: rotate(90deg);
-    background-color: rgba(255, 205, 230, 0.5);
+    background-image: linear-gradient(rgba(255, 205, 230, 0.5), rgba(255, 0, 0, 0.5));
   }
 }
 @keyframes bloom-5 {
@@ -88,7 +92,7 @@
   }
   100% {
     transform: rotate(135deg);
-    background-color: rgba(255, 205, 230, 0.5);
+    background-image: linear-gradient(rgba(255, 205, 230, 0.5), rgba(255, 0, 0, 0.5));
   }
 }
 

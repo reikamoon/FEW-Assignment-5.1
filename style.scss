@@ -72,56 +72,14 @@ $pink: rgba(255, 205, 230, 0.5);
     animation-name: bloom-5;
 }
 
-@keyframes bloom-1 {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    100% {
-        transform: rotate(-45deg);
-        background-color: $pink;
-
-    }
-}
-
-@keyframes bloom-2 {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    100% {
-        transform: rotate(0);
-        background-color: $pink;
-
-    }
-}
-
-@keyframes bloom-3 {
-    100% {
-        background-color: $pink;
-    }
-}
-
-@keyframes bloom-4 {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    100% {
-        transform: rotate(90deg);
-        background-color: $pink;
-
-    }
-}
-
-@keyframes bloom-5 {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    100% {
-        transform: rotate(135deg);
-        background-color: $pink;
-
+@for $n from 1 through 5 {
+    @keyframes bloom-#{$n} {
+        0% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(($n - 2) * 45deg);
+            background-image: linear-gradient($pink, $first-petal);
+        }
     }
 }
